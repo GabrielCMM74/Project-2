@@ -1,3 +1,4 @@
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -9,20 +10,20 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 
 // load the env consts
-require('dotenv').config();
+
 console.log(process.env.GOOGLE_CLIENT_ID);
 console.log(process.env.GOOGLE_SECRET);
 console.log(process.env.GOOGLE_CALLBACK);
 
 // create the Express app
-const app = express();
+
 
 // connect to the MongoDB with mongoose
 require('./config/database');
 require('./config/passport');
-const indexRoutes = require('./routes/index');
+const indexRouter = require('./routes/index');
 
-
+const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -52,7 +53,7 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
+app.use('/', indexRouter);
 
 
 
