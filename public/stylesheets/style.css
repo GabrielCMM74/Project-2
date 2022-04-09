@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  
 }
 
 
@@ -31,7 +31,7 @@ body > main {
   flex-direction: column;
   align-items: center;
   background-color: #E8ECEB;
-  padding: 20px;
+  padding: 30px;
   overflow-y: scroll;
 }
 
@@ -71,4 +71,10 @@ nav > a:hover {
 
 .login img {
   height: 30px;
+}
+
+#text {
+  color: white;
+  padding: 50 px
+
 }
