@@ -10,6 +10,9 @@ const methodOverride = require('method-override');
 
 // load the env consts
 require('dotenv').config();
+console.log(process.env.GOOGLE_CLIENT_ID);
+console.log(process.env.GOOGLE_SECRET);
+console.log(process.env.GOOGLE_CALLBACK);
 
 // create the Express app
 const app = express();
