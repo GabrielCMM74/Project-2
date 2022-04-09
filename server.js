@@ -22,7 +22,7 @@ console.log(process.env.GOOGLE_CALLBACK);
 require('./config/database');
 require('./config/passport');
 const indexRouter = require('./routes/index');
-
+const portfoliosRouter = require('./routes/portfolios');
 const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,6 +54,7 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
+app.use('/portfolios', portfoliosRouter);
 
 
 

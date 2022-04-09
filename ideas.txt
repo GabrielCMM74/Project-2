@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<%- include('../partials/footer') %>
+
+
+ <% portfolio.forEach(p => { %>
+          <tr>
+            <td><%= p.portfolio %></td>
+            <td><%= p.budget %></td>
+            <td><%= p.Date %></td>
+            <td><%= p.expenseType %></td>
+            <td><%= p.amount %></td>
+            <td><%= p.amountLeft %></td>
+            <td><a href="/portfolio/<%= p._id %>">DETAILS</a></td>
+          </tr>
+        <!-- Close the forEach using EJS here -->
+        <% }); %>

@@ -5,9 +5,7 @@ const Schema = mongoose.Schema;
 const portfolioSchema = new Schema({
     portfolio: {
         type: String,
-       
     },
-
     budget: {
         type: Number,
         
@@ -28,8 +26,8 @@ const portfolioSchema = new Schema({
     },
     amountLeft: {
         type: Number, 
-
     }
+    
 });
 
 module.exports = mongoose.model('Portfolio', portfolioSchema);
