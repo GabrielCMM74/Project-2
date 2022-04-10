@@ -11,9 +11,9 @@
     </head>
 
     <body>
-        <h3>
-            <div class="shadow-lg p-3 mb-5 bg-body rounded"> Create Portfolio</div>
-        </h3>
+        <h5>
+           <button class="shadow-lg p-3 mb-5 bg-body rounded"> <a href="portfolios/new" > Create Portfolio </a></button>
+        </h5>
         <table id="text" class="table table-dark table-hover table-bordered">
             <thead>
                 <tr>
@@ -25,6 +25,17 @@
                 </tr>
             </thead>
             <tbody>
+                <% portfolios.forEach(p => { %>
+                    <tr>
+                        <td><%= p.date %></td>
+                        <td><%= p.budget %></td>
+                        <td><%= p.expenseType %></td>
+                        <td><%= p.amount %></td>
+                        <td><%= p.amountLeft %></td>
+                      <td><a href="/portfolio/<%= p._id %>">DETAILS</a></td>
+                    </tr>
+                  <!-- Close the forEach using EJS here -->
+                  <% }); %>
                 <!-- Write the line of EJS to iterate over movies using forEach -->
             </tbody>
         </table>

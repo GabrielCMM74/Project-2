@@ -15,7 +15,7 @@ const portfolioSchema = new Schema({
         enum: ['Housing', 'Food', 'Utilities', 'Loans', 'Medical', 'Insurance', 'Car', 'Gas', 'Other'],
         default: 'Other'
     },
-    Date: {
+    date: {
         type: Date,
     },
     amount: {
