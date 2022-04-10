@@ -8,6 +8,6 @@ router.get('/new', portfoliosCtrl.new);
 
 // router.get('/:id', portfoliosCtrl.show);
 
-router.post('/:id', portfoliosCtrl.create)
+router.post('/', portfoliosCtrl.create)
 
 module.exports = router;

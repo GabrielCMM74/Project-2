@@ -10,14 +10,17 @@
 <body>
   
     <h2>Enter your information</h2>
-<form action="/:id" method="POST" class="form">
 
+<form action="/portfolios" method="POST" class="form">
+
+    <table id="text" class="table table-dark table-hover table-bordered">
+        
 <label>Portfolio
     <input type="text" name="portfolio" placeholder="Insert portfolio name">
 </label><br>
 
 <label>Budget Amount
-    <input type="number" name="budge" placeholder="Insert budget amount">
+    <input type="number" name="budget" placeholder="Insert budget amount">
 </label><br>
 
   <label>Expense Category
@@ -45,7 +48,7 @@
 
   <input type="submit" value="Add Portfolio">
 </form>
-
+</table>
 </body>
 
 <%- include('../partials/footer') %>

@@ -18,15 +18,15 @@ function index(req, res){
 function create(req, res){
   Portfolio.create(req.body, function(err, portfolios){
       if (err) return res.render('portfolios/new',{ portfolios, title: "Portfolio Create" });
-      res.redirect('/');
+      res.redirect('portfolios');
   })
 }
 
 
 function newPortoflio(req, res) {
-  // const newPortoflio = new Portfolio();
+  const newPortoflio = new Portfolio();
  
-  res.render('portfolios/new',{ title: "Portfolio Create" })
+  res.render('portfolios/new',{newPortoflio, title: "Portfolio Create" })
 }
 
 

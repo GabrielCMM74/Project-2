@@ -16,7 +16,7 @@ const portfolioSchema = new Schema({
         default: 'Other'
     },
     date: {
-        type: Date,
+        type: String,
     },
     amount: {
         type: Number,
