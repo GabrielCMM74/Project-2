@@ -4,7 +4,8 @@ const Portfolio = require("../models/portfolio");
 module.exports = {
     index,
     create,
-    new: newPortoflio
+    new: newPortoflio,
+    delete: deletePortfolio
   };
 
 
@@ -29,7 +30,15 @@ function newPortoflio(req, res) {
   res.render('portfolios/new',{newPortfolio, portfolios, title: "Portfolio Create" })
 })}
 
-
+function deletePortfolio(req, res) {
+  Portfolio.findByIdAndDelete(req.params.id, function(err, portfolios){
+    if (err) return res.redirect('/');
+      console.log(portfolios);
+      Portfolio.save(function(err){
+        res.redirect('portfolios/index');
+      })
+    });
+  };
 // function show(req, res, next) {
 //   Portfolio.findById(req.params.id, function (err, flight) {
 //     if (err) return res.redirect('/flights');{

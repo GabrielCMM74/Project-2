@@ -37,7 +37,8 @@
                       <td><%= p.expenseType %></td>
                       <td>$<%= p.amount %></td>
                       <td>$<%= p.amountLeft = p.budget - p.amount %></td>
-                    
+                      <td><form action="/portfolios/<%= portfolios._id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete Line</button></td>
             
                     </tr>
                   <!-- Close the forEach using EJS here -->

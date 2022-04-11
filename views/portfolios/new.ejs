@@ -9,16 +9,16 @@
     <title>Add portfolio</title>
 </head>
 <body>
-  <div class="login-box"></div>
+  
     <h2>Enter your information</h2>
 
-    <form action="/portfolios" method="POST" >
-      <div class="user-box">
-        
-        
-        <input type="text" name="portfolio" placeholder="Insert portfolio name">
-        <label>Portfolio</label>
-        
+<form action="/portfolios" method="POST" class="form">
+
+  
+    
+<label>Portfolio
+    <input type="text" name="portfolio" placeholder="Insert portfolio name">
+</label><br>
 
 <label>Budget Amount
     <input type="number" name="budget" placeholder="Insert budget amount">
@@ -46,12 +46,11 @@
     <input type="datetime-local" name="date">
   </label><br>
   <input type="submit" class="btn btn-primary" value="Add Portfolio">
-</form>
-<form method= "get" action="/portfolios">
+</form> <form method= "get" action="/portfolios">
   <button class="btn btn-warning"> Done </button>
   </form>
-</div>
 
+</table>
 
 <table class="table table-striped table-hover table-bordered">
   <thead>
