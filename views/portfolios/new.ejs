@@ -4,20 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/public/stylesheets/style.css' />
+    <link rel='stylesheet' href='/public/stylesheets/newstyles.css' />
     <title>Add portfolio</title>
 </head>
 <body>
-  
+  <div class="login-box"></div>
     <h2>Enter your information</h2>
 
-<form action="/portfolios" method="POST" class="form">
-
-    <table id="text" class="table table-dark table-hover table-bordered">
+    <form action="/portfolios" method="POST" >
+      <div class="user-box">
         
-<label>Portfolio
-    <input type="text" name="portfolio" placeholder="Insert portfolio name">
-</label><br>
+        
+        <input type="text" name="portfolio" placeholder="Insert portfolio name">
+        <label>Portfolio</label>
+        
 
 <label>Budget Amount
     <input type="number" name="budget" placeholder="Insert budget amount">
@@ -42,13 +43,46 @@
   </label><br>
 
   <label>Date
-    <input type="date" name="date">
+    <input type="datetime-local" name="date">
   </label><br>
-
-
-  <input type="submit" value="Add Portfolio">
+  <input type="submit" class="btn btn-primary" value="Add Portfolio">
 </form>
+<form method= "get" action="/portfolios">
+  <button class="btn btn-warning"> Done </button>
+  </form>
+</div>
+
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+      <tr>
+          <th>Portfolio</th>
+          <th>Date</th>
+          <th>Budget</th>
+          <th>Expense</th>
+          <th>Amount</th>
+          <th>Sum</th>
+          
+      </tr>
+  </thead>
+  <tbody>
+      <% portfolios.forEach(p => { %>
+          <tr>
+            <td><%= p.portfolio %></td>
+            <td><%= p.date.toString().slice(0, 15) %></td>
+            <td>$<%= p.budget %></td>
+            <td><%= p.expenseType %></td>
+            <td>$<%= p.amount %></td>
+            <td>$<%= p.amountLeft = p.budget - p.amount %></td>
+          
+  
+          </tr>
+        <!-- Close the forEach using EJS here -->
+        <% }); %>
+      <!-- Write the line of EJS to iterate over movies using forEach -->
+  </tbody>
 </table>
+
 </body>
 
 <%- include('../partials/footer') %>

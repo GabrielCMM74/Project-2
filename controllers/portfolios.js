@@ -18,16 +18,16 @@ function index(req, res){
 function create(req, res){
   Portfolio.create(req.body, function(err, portfolios){
       if (err) return res.render('portfolios/new',{ portfolios, title: "Portfolio Create" });
-      res.redirect('portfolios');
+      res.redirect('portfolios/new');
   })
 }
 
 
 function newPortoflio(req, res) {
-  const newPortoflio = new Portfolio();
- 
-  res.render('portfolios/new',{newPortoflio, title: "Portfolio Create" })
-}
+  const newPortfolio = new Portfolio();
+  Portfolio.find({}, function (err, portfolios) {
+  res.render('portfolios/new',{newPortfolio, portfolios, title: "Portfolio Create" })
+})}
 
 
 // function show(req, res, next) {
