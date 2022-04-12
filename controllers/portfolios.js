@@ -53,9 +53,11 @@ function detailPortfolio(req, res) {
 
 function editPortfolio(req, res) {
   Portfolio.findById(req.params.id, function (err, overridePortfolio) {
+    console.log(err)
     if (err) return res.redirect('/portfolios/index');
-    req.body = portfolio
-    res.render('portfolios/edit', {overridePortfolio, title: "Edit Portfolio" })
+    console.log(req.body, '<--- Req body')
+    console.log(overridePortfolio, '<--- override')
+    res.redirect(`/portfolios/${req.params.id}`)
   })}
 
 
