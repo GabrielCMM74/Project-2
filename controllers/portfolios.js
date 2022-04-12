@@ -43,8 +43,12 @@ function deletePortfolio(req, res) {
 
 
 function editPortfolio(req, res) {
-  res.render('portfolios/edit', {title: "Edit Portfolio" })
-}
+  Portfolio.findById(req.params.id, function (err, editPortfolio) {
+    if (err) return res.redirect('/portfolios/index');
+    res.render('portfolios/edit', {editPortfolio, title: "Edit Portfolio" })
+  })}
+
+
 
 
 
