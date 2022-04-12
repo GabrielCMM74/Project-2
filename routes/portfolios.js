@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const portfoliosCtrl = require('../controllers/portfolios')
+const isLoggedIn = require('../config/auth');
 
 router.get('/', portfoliosCtrl.index)
 
-router.get('/new', portfoliosCtrl.new);
+router.get('/new', isLoggedIn,portfoliosCtrl.new);
 
 // router.get('/:id', portfoliosCtrl.show);
 

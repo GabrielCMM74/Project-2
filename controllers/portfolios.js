@@ -20,6 +20,8 @@ function index(req, res){
 }
 
 function create(req, res){
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
   Portfolio.create(req.body, function(err, portfolios){
       if (err) return res.render('portfolios/new',{ portfolios, title: "Portfolio Create" });
       res.redirect('portfolios/new');
@@ -52,12 +54,11 @@ function detailPortfolio(req, res) {
 
 
 function editPortfolio(req, res) {
-  Portfolio.findById(req.params.id, function (err, overridePortfolio) {
-    console.log(err)
+  Portfolio.findByIdAndUpdate(req.params.id, req.body, {new:true}, function (err, overridePortfolio) {
     if (err) return res.redirect('/portfolios/index');
-    console.log(req.body, '<--- Req body')
-    console.log(overridePortfolio, '<--- override')
-    res.redirect(`/portfolios/${req.params.id}`)
+    // console.log(req.body, '<--- Req body')
+    // console.log(overridePortfolio, '<--- override')
+      res.redirect(`/portfolios/${req.params.id}`)
   })}
 
 

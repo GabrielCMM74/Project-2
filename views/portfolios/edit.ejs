@@ -28,7 +28,7 @@
             
                 <tr>
                   <td><%= detailsPortfolio.portfolio %></td>
-                  <td><%= detailsPortfolio.date.toString().slice(0, 15)%></td>
+                  <td><%= detailsPortfolio.date%></td>
                   <td>$<%= detailsPortfolio.budget %></td>
                   <td><%= detailsPortfolio.expenseType %></td>
                   <td>$<%= detailsPortfolio.amount %></td>
@@ -46,15 +46,16 @@
   
     
         <label>Portfolio
-            <input type="text" name="portfolio" placeholder="Insert portfolio name">
+            <input type="text" name="portfolio" value="<%= detailsPortfolio.portfolio %>">
         </label><br>
         
         <label>Budget Amount
-            <input type="number" name="budget" placeholder="Insert budget amount">
+            <input type="number" name="budget" value="<%= detailsPortfolio.budget %>">
         </label><br>
         
           <label>Expense Category
             <select name="expenseType">
+                <option value="<%= detailsPortfolio.expenseType %>"><%= detailsPortfolio.expenseType %></option>
                 <option value="Housing">Housing</option>
                 <option value="Food">Food</option>
                 <option value="Utilities">Utilities</option>
@@ -68,11 +69,11 @@
           </label><br>
         
           <label>Amount Spent
-            <input type="number" name="amount" min="0" max="9999999" placeholder="$$$">
+            <input type="number" name="amount" min="0" max="9999999" value="<%=detailsPortfolio.amount %>">
           </label><br>
         
           <label>Date
-            <input type="datetime-local" name="date">
+            <input type="datetime-local" name="date" value="<%= detailsPortfolio.date%>">
           </label><br>
           <input type="submit" class="btn btn-primary" value="Add Portfolio">
         </form> 

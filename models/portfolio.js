@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 
 const portfolioSchema = new Schema({
     portfolio: {
-        type: String,
-    },
+        type: String},
+     user: {type: Schema.Types.ObjectId, ref: 'User'},
+     userName: String
+    ,
     budget: {
         type: Number,
         

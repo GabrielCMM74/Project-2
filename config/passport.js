@@ -42,7 +42,7 @@ passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
 
-passport.deserializeUser(function(id, done) {
+passport.deserializeUser(function(userId, done) {
   User.findById(userId, function(err, user){
 		if(err) return cb(err);
 		cb(null, user); // <- this assings the user document we just found to the request object
