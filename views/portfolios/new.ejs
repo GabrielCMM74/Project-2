@@ -68,13 +68,14 @@
   <tbody>
       <% portfolios.sort((a, b) => b.portfolio.localeCompare(a.portfolio)).forEach(p => { %>
           <tr>
+            <% if (user && user._id.equals(p.user)) { %>
             <td><%= p.portfolio %></td>
             <td><%= p.date.toString().slice(0, 15) %></td>
             <td>$<%= p.budget %></td>
             <td><%= p.expenseType %></td>
             <td>$<%= p.amount %></td>
             <td>$<%= p.amountLeft = p.budget - p.amount %></td>
-            
+            <% } %>
   
           </tr>
         <!-- Close the forEach using EJS here -->

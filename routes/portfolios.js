@@ -4,6 +4,7 @@ const portfoliosCtrl = require('../controllers/portfolios')
 const isLoggedIn = require('../config/auth');
 
 router.get('/', portfoliosCtrl.index)
+router.get('/error', portfoliosCtrl.error)
 
 router.get('/new', isLoggedIn,portfoliosCtrl.new);
 

@@ -25,10 +25,10 @@
             </tr>
         </thead>
         <tbody>
-            
+         
                 <tr>
                   <td><%= detailsPortfolio.portfolio %></td>
-                  <td><%= detailsPortfolio.date%></td>
+                  <td><%= detailsPortfolio.date.toString().slice(0, 15)%></td>
                   <td>$<%= detailsPortfolio.budget %></td>
                   <td><%= detailsPortfolio.expenseType %></td>
                   <td>$<%= detailsPortfolio.amount %></td>

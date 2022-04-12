@@ -10,10 +10,13 @@
 <body>
   <nav>
    
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <a href="/portfolios"  class="link-success login"> Portfolio </a>
-      <a href="../"  class="link-success login"> Home </a>
-   
+    <a href="../"  class="link-success login"> Home </a>
+    <a href="/portfolios"  class="link-success login"> Portfolio </a>
+    <% if (user) { %>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
   </nav>
   <main>
     <h1><%= title %></h1>

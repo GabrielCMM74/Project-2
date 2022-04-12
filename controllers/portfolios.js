@@ -8,7 +8,8 @@ module.exports = {
     new: newPortoflio,
     deletePortfolio,
     editPortfolio,
-    detailPortfolio
+    detailPortfolio,
+    error
   };
 
 
@@ -17,6 +18,10 @@ function index(req, res){
     Portfolio.find({}, function (err, portfolios) {
       res.render('portfolios/index', { portfolios, title: "Portfolio Center" });
   });
+}
+function error(req, res){
+      res.render('error', {title: "Error Page" });
+  
 }
 
 function create(req, res){
