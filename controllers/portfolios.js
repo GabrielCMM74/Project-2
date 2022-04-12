@@ -1,3 +1,4 @@
+const portfolio = require("../models/portfolio");
 const Portfolio = require("../models/portfolio");
 
 
@@ -6,7 +7,8 @@ module.exports = {
     create,
     new: newPortoflio,
     deletePortfolio,
-    editPortfolio
+    editPortfolio,
+    detailPortfolio
   };
 
 
@@ -42,10 +44,18 @@ function deletePortfolio(req, res) {
   };
 
 
-function editPortfolio(req, res) {
-  Portfolio.findById(req.params.id, function (err, editPortfolio) {
+function detailPortfolio(req, res) {
+  Portfolio.findById(req.params.id, function (err, detailsPortfolio) {
     if (err) return res.redirect('/portfolios/index');
-    res.render('portfolios/edit', {editPortfolio, title: "Edit Portfolio" })
+    res.render('portfolios/edit', {detailsPortfolio, title: "Edit Portfolio" })
+  })}
+
+
+function editPortfolio(req, res) {
+  Portfolio.findById(req.params.id, function (err, overridePortfolio) {
+    if (err) return res.redirect('/portfolios/index');
+    req.body = portfolio
+    res.render('portfolios/edit', {overridePortfolio, title: "Edit Portfolio" })
   })}
 
 

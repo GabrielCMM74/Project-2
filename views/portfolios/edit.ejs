@@ -27,12 +27,12 @@
         <tbody>
             
                 <tr>
-                  <td><%= editPortfolio.portfolio %></td>
-                  <td><%= editPortfolio.date.toString().slice(0, 15)%></td>
-                  <td>$<%= editPortfolio.budget %></td>
-                  <td><%= editPortfolio.expenseType %></td>
-                  <td>$<%= editPortfolio.amount %></td>
-                  <td>$<%= editPortfolio.amountLeft = editPortfolio.budget - editPortfolio.amount %></td>
+                  <td><%= detailsPortfolio.portfolio %></td>
+                  <td><%= detailsPortfolio.date.toString().slice(0, 15)%></td>
+                  <td>$<%= detailsPortfolio.budget %></td>
+                  <td><%= detailsPortfolio.expenseType %></td>
+                  <td>$<%= detailsPortfolio.amount %></td>
+                  <td>$<%= detailsPortfolio.amountLeft = detailsPortfolio.budget - detailsPortfolio.amount %></td>
         
                 </tr>
               <!-- Close the forEach using EJS here -->
@@ -41,7 +41,7 @@
         </tbody>
     </table>
 
-    <form action="/portfolios/" method="POST" class="form">
+    <form name="portfolio" action="/portfolios/<%= detailsPortfolio._id %>?_method=PUT" method="POST" class="form">
 
   
     
@@ -75,7 +75,9 @@
             <input type="datetime-local" name="date">
           </label><br>
           <input type="submit" class="btn btn-primary" value="Add Portfolio">
-        </form> <form method= "get" action="/portfolios">
+        </form> 
+        
+        <form method= "get" action="/portfolios">
           <button class="btn btn-warning"> Done </button>
           </form>
         

@@ -10,7 +10,9 @@ router.get('/new', portfoliosCtrl.new);
 
 router.post('/', portfoliosCtrl.create)
 
-router.get('/:id', portfoliosCtrl.editPortfolio)
+router.get('/:id', portfoliosCtrl.detailPortfolio)
+
+router.put('/:id', portfoliosCtrl.editPortfolio)
 
 router.delete('/:id', portfoliosCtrl.deletePortfolio);
 
