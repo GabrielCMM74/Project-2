@@ -5,7 +5,8 @@ module.exports = {
     index,
     create,
     new: newPortoflio,
-    deletePortfolio
+    deletePortfolio,
+    editPortfolio
   };
 
 
@@ -39,6 +40,16 @@ function deletePortfolio(req, res) {
       })
     });
   };
+
+
+function editPortfolio(req, res) {
+  res.render('portfolios/edit', {title: "Edit Portfolio" })
+}
+
+
+
+
+
 // function show(req, res, next) {
 //   Portfolio.findById(req.params.id, function (err, flight) {
 //     if (err) return res.redirect('/flights');{

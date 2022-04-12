@@ -33,7 +33,8 @@
             <tbody>
                 <% portfolios.sort((a, b) => b.portfolio.localeCompare(a.portfolio)).forEach(p => { %>
                     <tr>
-                      <td><%= p.portfolio %></td>
+                     
+                      <td><%= p.portfolio %><a href="/portfolios/edit"> edit</a></td>
                       <td><%= p.date.toString().slice(0, 15) %></td>
                       <td>$<%= p.budget %></td>
                       <td><%= p.expenseType %></td>
