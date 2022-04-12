@@ -37,7 +37,7 @@ body > main {
 
 nav > a:hover {
   color: white;
-  background-color: #424748;
+  background-color: #aaadae;
 }
 
 .brand-logo {
@@ -74,12 +74,12 @@ nav > a:hover {
 }
 
 #text {
-  color: white;
+  color: rgb(234, 234, 234);
   padding: 50 px
 
 }
 #text1 {
-  color: rgb(150, 143, 143);
+  color: rgb(1, 1, 1);
   padding: 50 px
 
 }

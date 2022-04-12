@@ -5,7 +5,7 @@ module.exports = {
     index,
     create,
     new: newPortoflio,
-    delete: deletePortfolio
+    deletePortfolio
   };
 
 
@@ -34,8 +34,8 @@ function deletePortfolio(req, res) {
   Portfolio.findByIdAndDelete(req.params.id, function(err, portfolios){
     if (err) return res.redirect('/');
       console.log(portfolios);
-      Portfolio.save(function(err){
-        res.redirect('portfolios/index');
+      portfolios.save(function(err){
+        res.redirect('/portfolios');
       })
     });
   };

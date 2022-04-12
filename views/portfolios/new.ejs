@@ -4,9 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel='stylesheet' href='/public/stylesheets/style.css' />
-    <link rel='stylesheet' href='/public/stylesheets/newstyles.css' />
-    <title>Add portfolio</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/newstyles.css' />
+    <title></title>
 </head>
 <body>
   
@@ -52,7 +53,7 @@
 
 </table>
 
-<table class="table table-striped table-hover table-bordered">
+<table id="text1" class="table table-striped table-hover table-bordered">
   <thead>
       <tr>
           <th>Portfolio</th>
@@ -65,7 +66,7 @@
       </tr>
   </thead>
   <tbody>
-      <% portfolios.forEach(p => { %>
+      <% portfolios.sort((a, b) => b.portfolio.localeCompare(a.portfolio)).forEach(p => { %>
           <tr>
             <td><%= p.portfolio %></td>
             <td><%= p.date.toString().slice(0, 15) %></td>
@@ -73,7 +74,7 @@
             <td><%= p.expenseType %></td>
             <td>$<%= p.amount %></td>
             <td>$<%= p.amountLeft = p.budget - p.amount %></td>
-          
+            
   
           </tr>
         <!-- Close the forEach using EJS here -->

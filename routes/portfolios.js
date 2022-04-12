@@ -10,6 +10,6 @@ router.get('/new', portfoliosCtrl.new);
 
 router.post('/', portfoliosCtrl.create)
 
-router.delete('/:id', portfoliosCtrl.delete);
+router.delete('/:id', portfoliosCtrl.deletePortfolio);
 
 module.exports = router;
