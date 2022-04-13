@@ -10,7 +10,9 @@
     <title></title>
 </head>
 <body>
-    <h3>This is the edit page</h3>
+  <div class="brand-title">Edit Portfolio</div>
+    
+  </div>
 
     <table   class="table table-dark table-hover">
         <thead>
@@ -40,8 +42,9 @@
             <!-- Write the line of EJS to iterate over movies using forEach -->
         </tbody>
     </table>
-
-    <form name="portfolio" action="/portfolios/<%= detailsPortfolio._id %>?_method=PUT" method="POST" class="form">
+    <div class="container">
+      <form name="portfolio" action="/portfolios/<%= detailsPortfolio._id %>?_method=PUT" method="POST" class="form">
+        <div class="inputs"></div>
 
   
     
@@ -50,7 +53,7 @@
         </label><br>
         
         <label>Budget Amount
-            <input type="number" name="budget" value="<%= detailsPortfolio.budget %>">
+            <input type="text" name="budget" value="<%= detailsPortfolio.budget %>">
         </label><br>
         
           <label>Expense Category
@@ -69,7 +72,7 @@
           </label><br>
         
           <label>Amount Spent
-            <input type="number" name="amount" min="0" max="9999999" value="<%=detailsPortfolio.amount %>">
+            <input type="text" name="amount" min="0" max="9999999" value="<%=detailsPortfolio.amount %>">
           </label><br>
         
           <label>Date
@@ -80,10 +83,10 @@
         
         <form method= "get" action="/portfolios">
           <button class="btn btn-warning"> Done </button>
+        </div>
           </form>
         
-        </table>
-
+        
 </body>
 
 
