@@ -15,7 +15,7 @@ const portfolioSchema = new Schema({
     },
     expenseType: {
         type: String,
-        enum: ['Housing', 'Food', 'Utilities', 'Loans', 'Medical', 'Insurance', 'Car', 'Gas', 'Other'],
+        enum: ['Housing', 'Food', 'Utilities', 'Loans', 'Medical', 'Insurance', 'Car', 'Gas','Clothes', 'Other'],
         default: 'Other'
     },
     date: {
