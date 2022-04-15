@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    
+  }
+  
+  
+  body {
+    margin: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+  }
+  
+   body > nav {
+    display: flex;
+    background-color: #aee1f9;
+    background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  body > main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7fcec5;
+    background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+    padding: 30px;
+    overflow-y: scroll;
+  }
+  
+  h1 { 
+    color: #c9d0d4 !important; 
+    font-family: 'Helvetica Neue', sans-serif !important; 
+    font-size: 46px; 
+    font-weight: 100; 
+    line-height: 50px; 
+    letter-spacing: 1px; 
+    padding: 0 0 20px; 
+    border-bottom: double rgb(196, 196, 196);
+ }
+
+  nav > a:hover {
+    color: white;
+  }
+  
+  #title1{
+    color: antiquewhite;
+  }
+  
+  #navC{
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .card-content .card-title {
+    margin-bottom: 10px;
+  }
+  
+  #search-row form {
+    padding-top: 20px;
+  }
+  
+  .student-name {
+    position: relative;
+    top: -5px;
+  }
+  
+  .collection-item form {
+    margin-top: -5px;
+  }
+  
+  .login {
+    display: flex;
+    padding-left: 34px;
+    justify-content:space-around;
+    align-items: center;
+    height: 34px;
+    margin: auto;
+  }
+  
+  .login img {
+    height: 30px;
+  }
+  .edit1{
+    display: flex;
+  }
+  .edit  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 23px;
+    margin-left: 4px;
+  }
+  
+  #text {
+    color: rgb(234, 234, 234);
+    /* padding: 50 px */
+  
+  }
+  #text1 {
+    color: rgb(1, 1, 1);
+    /* padding: 50 px */
+  
+  }
+  
+  
+  

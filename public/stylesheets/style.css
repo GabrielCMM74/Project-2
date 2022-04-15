@@ -17,31 +17,57 @@ body {
 
  body > nav {
   display: flex;
-  background-color: #B8C0C2;
-  display: flex;
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
   position: relative;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  padding: 0 220px 0 0px;
+ 
 }
-
 
 body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
   padding: 30px;
   overflow-y: scroll;
 }
 
 nav > a:hover {
   color: white;
-  background-color: #aaadae;
+}
+h1 { 
+  color: #f58464 ; 
+  font-family: 'Lato', sans-serif  ; 
+  font-size: 54px ; 
+  font-weight: 300 ; 
+  line-height: 58px ; 
+
+ }
+
+ .egg:hover{
+   color: rgb(27, 25, 25) ;
+   margin-top: 70vh;
+   font-size: large;
+ }
+.egg{
+  color: transparent;
+  margin-top: 70vh;
+
 }
 
 
+#title1{
+  color: antiquewhite;
+}
+
+#navC{
+  display: flex;
+  align-items: center;
+}
 
 .card .card-content .card-title {
   margin-bottom: 10px;
@@ -62,7 +88,8 @@ nav > a:hover {
 
 .login {
   display: flex;
-  justify-content: space-evenly;
+  padding-left: 34px;
+  justify-content:space-around;
   align-items: center;
   height: 34px;
   margin: auto;

@@ -1,5 +1,4 @@
 <%- include('../partials/header') %>
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,7 +11,7 @@
     <body>
         <h5>
             <form method= "get" action="portfolios/new">
-           <button class="shadow-lg p-3 mb-4 bg-body rounded"> Create Portfolio </button>
+           <button id="text2" class="btn btn-outline-dark"> Create Portfolio </button>
             </form>
         </h5>
         <table id="text1" class="table table-striped table-hover table-bordered">
@@ -31,27 +30,20 @@
                 <% portfolios.sort((a, b) => b.portfolio.localeCompare(a.portfolio)).forEach(p => { %>
                     <tr>
                         <% if (user && user._id.equals(p.user)) { %>  
-                      <td class="edit1"><%= p.portfolio %><a class="editA"  href="/portfolios/<%= p._id %>"><img class="edit"  src="https://o.remove.bg/downloads/cd14ac39-cea6-4caf-b4ab-67ff81ffaa0d/edit-removebg-preview.png"></a></td>
+                      <td class="edit1"><%= p.portfolio %><a class="editA"  href="/portfolios/<%= p._id %>"><img class="edit"  src="/images/edit.png"></a></td>
                       <td><%= p.date.toString().slice(0, 15) %></td>
                       <td>$<%= p.budget %></td>
                       <td><%= p.expenseType %></td>
                       <td>$<%= p.amount %></td>
                       <td>$<%= p.amountLeft = p.budget - p.amount %></td>
                       <td><form action="/portfolios/<%= p._id %>?_method=DELETE" method="POST">
-                        <input class="edit" type="image" src="https://o.remove.bg/downloads/20d0a3ab-942a-49c8-b3e3-48d8d058f5f9/delete-removebg-preview.png"></input></td>
+                        <input class="edit" type="image" src="/images/delete.png"></input></td>
                         <% } %>
-            
                     </tr>
-                  <!-- Close the forEach using EJS here -->
                   <% }); %>
-                <!-- Write the line of EJS to iterate over movies using forEach -->
             </tbody>
         </table>
-        
-
-
     </body>
-
     </html>
 
 
