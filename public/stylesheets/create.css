@@ -3,17 +3,23 @@ html {
   }
   body {
     margin:0;
-    padding:0;
+    padding:30px;
     font-family: sans-serif;
     background: linear-gradient(#141e30, #243b55);
   }
+
+#text1{
   
+  background-color: #bdd4e7;
+  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+
   .login-box {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 400px;
-    padding: 40px;
+    padding: 30px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
@@ -56,10 +62,14 @@ html {
   
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
-    top: -20px;
+    top: -30px;
     left: 0;
-    color: #03e9f4;
-    font-size: 12px;
+    color: #039cf4;
+    font-size: 15px;
+  }
+  .textE{
+     color: #039cf4;
+    font-size: 15px;
   }
   
   .login-box form a {
@@ -97,7 +107,7 @@ html {
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
+    animation: btn-anim1 2s linear infinite;
   }
   
   @keyframes btn-anim1 {
@@ -115,7 +125,7 @@ html {
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
+    animation: btn-anim2 2s linear infinite;
     animation-delay: .25s
   }
   
@@ -134,7 +144,7 @@ html {
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
+    animation: btn-anim3 2s linear infinite;
     animation-delay: .5s
   }
   
@@ -153,7 +163,7 @@ html {
     width: 2px;
     height: 100%;
     background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
+    animation: btn-anim4 2s linear infinite;
     animation-delay: .75s
   }
   

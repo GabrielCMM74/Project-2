@@ -71,6 +71,16 @@ nav > a:hover {
 .login img {
   height: 30px;
 }
+.edit1{
+  display: flex;
+}
+.edit  {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 23px;
+  margin-left: 4px;
+}
 
 #text {
   color: rgb(234, 234, 234);

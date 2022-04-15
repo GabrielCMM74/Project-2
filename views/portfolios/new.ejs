@@ -1,61 +1,84 @@
-<%- include('../partials/header') %>
+<!-- <%- include('../partials/header') %> -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel='stylesheet' href='/stylesheets/create.css' />
-    <!-- <link rel='stylesheet' href='/stylesheets/newstyles.css' /> -->
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title></title>
 </head>
 <body>
-  
+  <div class="login-box">
     <h2>Enter your information</h2>
 
 <form action="/portfolios" method="POST" class="form">
 
-  
-    
-<label>Portfolio
+  <div class="user-box">
+
     <input type="text" name="portfolio" placeholder="Insert portfolio name">
-</label><br>
+    <label>Portfolio</label>
+</div>
 
-<label>Budget Amount
-    <input type="number" name="budget" placeholder="Insert budget amount">
-</label><br>
+<div class="user-box">
 
-  <label>Expense Category
-    <select name="expenseType">
-        <option value="Housing">Housing</option>
-        <option value="Food">Food</option>
-        <option value="Utilities">Utilities</option>
-        <option value="Loans">Loans</option>
-        <option value="Medical">Medical</option>
-        <option value="Insurance">Insurance</option>
-        <option value="Car">Car</option>
-        <option value="Gas">Gas</option>
-        <option value="Clothes">Clothes</option>
-        <option value="Other">Other</option>
-    </select>
-  </label><br>
+<input type="number" name="budget" placeholder="Insert budget amount">
+<label>Budget Amount</label>
+</div>
 
-  <label>Amount Spent
-    <input type="number" name="amount" min="0" max="9999999" placeholder="$$$">
-  </label><br>
 
-  <label>Date
-    <input type="datetime-local" name="date">
-  </label><br>
-  <input type="submit" class="btn btn-primary" value="Add Portfolio">
-</form> <form method= "get" action="/portfolios">
-  <button class="btn btn-warning"> Done </button>
-  </form>
+<div class="user-box">
+  
+  <input type="number" name="amount" min="0" max="9999999" placeholder="$$$">
+  <label>Amount Spent</label>
+</div>
 
-</table>
+<div class="user-box">
+  <input type="datetime-local" name="date">
+  <label>Date</label>
+</div>
 
-<table id="text1" class="table table-striped table-hover table-bordered">
+<div class="textE">
+  <label>Expense Category</label>
+  </div>
+<select name="expenseType">
+  <option value="Housing">Housing</option>
+  <option value="Food">Food</option>
+  <option value="Utilities">Utilities</option>
+  <option value="Loans">Loans</option>
+  <option value="Medical">Medical</option>
+  <option value="Insurance">Insurance</option>
+  <option value="Car">Car</option>
+  <option value="Gas">Gas</option>
+  <option value="Clothes">Clothes</option>
+  <option value="Other">Other</option>
+</select>
+  <br><br><br>
+  <a href="">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Add Portfolio
+    <input type="submit" style="background: transparent;">
+  </a>
+</form> 
+<form method= "get" action="/portfolios">
+<a href="">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Return 
+  <button style="background: transparent;"> Done </button>
+</form></a>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<table id="text1"  class="table table-hover">
   <thead>
       <tr>
           <th>Portfolio</th>
@@ -80,11 +103,9 @@
             <% } %>
   
           </tr>
-        <!-- Close the forEach using EJS here -->
         <% }); %>
-      <!-- Write the line of EJS to iterate over movies using forEach -->
   </tbody>
-</table>
+</table><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 

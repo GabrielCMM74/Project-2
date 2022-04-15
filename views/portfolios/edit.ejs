@@ -1,20 +1,20 @@
 <!-- <%- include('../partials/header') %> -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/newstyles.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title display="none"></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/newstyles.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title display="none"></title>
 </head>
-<body><br><br><br><br>
+<body><br><br>
   <div class="brand-title">Edit Portfolio</div>
     
   </div>
 
-    <table  class="table table-striped table-hover table-bordered">
+    <table id="lin" class="table table-striped table-hover table-bordered">
         <thead>
             <tr>
                 <th>Portfolio</th>
@@ -26,9 +26,9 @@
                 
             </tr>
         </thead>
-        <tbody>
+        <tbody >
          
-                <tr>
+                <tr id="lin">
                   <td><%= detailsPortfolio.portfolio %></td>
                   <td><%= detailsPortfolio.date.toString().slice(0, 15)%></td>
                   <td>$<%= detailsPortfolio.budget %></td>
@@ -79,7 +79,7 @@
         
           <label>Date
             <input type="datetime-local" name="date" value="<%= detailsPortfolio.date%>">
-          </label><br>
+          </label><br><br>
           <input type="submit" class="btn btn-primary" value="Add Edits">
         </form> 
         
