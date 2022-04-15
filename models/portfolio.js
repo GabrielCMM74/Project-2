@@ -1,6 +1,20 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const stockSchema = new Schema({
+
+    stockName:{
+        type: String,
+        enum: ['TSLA', 'AAPL', 'MSFT', 'GOOG', 'GOOGL', 'AMZN', 'VFC', 'FB', 'NVDA'],
+        default: 'TSLA'
+    },
+    stockType:{
+        type: String,
+        enum: ['Finance', 'Media', 'Digital Currency', 'NFT', 'S&P', 'Auto', 'Data' ]
+    }
+})
+
+
 
 const portfolioSchema = new Schema({
     portfolio: {
@@ -29,7 +43,8 @@ const portfolioSchema = new Schema({
     },
     amountLeft: {
         type: Number, 
-    }
+    },
+    stocks: [stockSchema]
     
 });
 
