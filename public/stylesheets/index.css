@@ -2,9 +2,8 @@
     box-sizing: border-box;
     font-family: Helvetica;
     
-  }
-  
-  
+}
+
   body {
     margin: auto;
     height: 100vh;
@@ -14,18 +13,27 @@
       "nav"
       "main"
   }
+  #container{
+    height: 400px;
+    min-width: 600px;
+    opacity: 100%;
+    visibility: visible;
+  }
+
+.highcharts-credits{
+    visibility: hidden;
+}
   
-   body > nav {
+body > nav {
     display: flex;
     background-color: #bdd4e7;
     background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
     position: relative;
     justify-content: center;
     align-items: center;
-   
   }
  
-  body > main {
+body > main  {
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -34,9 +42,9 @@
     background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     padding: 30px;
     overflow-y: scroll;
-  }
+}
   
-  h1 { 
+h1 { 
     color: #c9d0d4 !important; 
     font-family: 'Helvetica Neue', sans-serif !important; 
     font-size: 46px; 
@@ -64,7 +72,8 @@ p {
     display: flex;
     align-items: center;
   }
-  #container{
+  
+  #container1{
     width: 380px;
     height: 600px;
   }

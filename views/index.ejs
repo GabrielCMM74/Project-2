@@ -1,17 +1,26 @@
 <%- include('./partials/header') %>
-  <head>
+<link rel='stylesheet' href='/stylesheets/stock.css' />
+<head>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+  <script src="/js/stock.js"></script>
     <link rel='stylesheet' href='/stylesheets/index.css' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   </head>
   <body>
    <br>
-    <h2></h2>
-    <div id="container">
+    <div id="container1">
       <p> What is a financial portfolio? Simply put, it’s a collection of financial assets.</p>
       <p> It could include stocks, bonds, cash and cash equivalents, or alternative investments. Here is a quick and easy way to get started with your portfolio, set up your budget today!</p>
-    </div>
+    </div><br>
+    <section>
+      <div id="container"></div>
+
+    </section>
     <footer>
-    <h5 class="egg">Batman Inc <%= title %></h5>
+      <h5 class="egg">Batman Inc <%= title %></h5>
     </footer>
   </body>
-<%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
