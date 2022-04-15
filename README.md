@@ -1,35 +1,46 @@
-# passport-boilerplate
+#  Finance Application:
 
+### Create your portfolio by managing your budget & expenses. 
+<p>This application is meant as an everyday tool or end of month check. Aligning your life with your financial goals. 
 
-This is your passport boilerplate.
+<p>This full-stack CRUD application is based on manging your finances. You begin by using a GUI with a stock model at the index page, here you are able to log in and see your portfolio. You are also able to create more portfolios, edit each one, and delete as your needs change. In order to access your personal portfolio you must sign in with your google account for security and privacy compliance. Index page contains integrated api chart for mock feature. 
 
-## Setup 
+- Finance App: https://finance-porfolio.herokuapp.com/
+- Credit API: https://www.highcharts.com/blog/products/stock/
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+![Index](public/images/index.png)
 
+![Portfolio Index](public/images/portfolio-index.png)
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
+![Create](public/images/Create.png)
 
-#### Setup your login
+![Edit](public/images/edit-page.png)
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+#### Technologies used:
+> NodeJS
+>
+> Express
+>
+> MongoDB/Mongoose
+>
+> Google OAuth2.0
+>
+> Javascript
+>
+> EJS 
+>
+> CSS
+>
+> Boostrap
+>
 
-#### Make a commit 
+### Getting Started:
+-  https://finance-porfolio.herokuapp.com/
 
-```git commit -m "setup up oauth and User Model"```
+#### Planned Next Steps:
+- Add stocks population for portfolio access.
+- Add stocks watchlist/tracker. 
+- Add a GUI for multiple stocks viewable at one time.
+- Add message system to be reported for budget amounts or stock prices. 
+- Integrate more stock information updating in real time.
+- Enhance styling layout for buttons and Index page. 
