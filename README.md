@@ -8,7 +8,7 @@
 - Finance App: https://finance-porfolio.herokuapp.com/
 - Credit API: https://www.highcharts.com/blog/products/stock/
 
-![Index](public/images/index.png)
+![Index](public/images/index-page.png)
 
 ![Portfolio Index](public/images/portfolio-index.png)
 
