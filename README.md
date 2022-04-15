@@ -36,7 +36,7 @@
 
 ### Getting Started:
 -  https://finance-porfolio.herokuapp.com/
-
+- Trello: https://trello.com/b/C1sVWpYX/project-2
 #### Planned Next Steps:
 - Add stocks population for portfolio access.
 - Add stocks watchlist/tracker. 
