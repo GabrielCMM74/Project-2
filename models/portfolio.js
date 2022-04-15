@@ -34,6 +34,9 @@ const portfolioSchema = new Schema({
     },
     date: {
         type: Date,
+        default: function () {
+            return new Date().getFullYear();
+          }
     },
     amount: {
         type: Number,
