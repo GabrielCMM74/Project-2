@@ -1,6 +1,6 @@
 #  Finance Application:
 
-### Create your portfolio by managing your budget & expenses. 
+### Create your portfolio to manage your budget & expenses. 
 <p>This application is meant as an everyday tool or end of month check. Aligning your life with your financial goals. 
 
 <p>This full-stack CRUD application is based on manging your finances. You begin by using a GUI with a stock model at the index page, here you are able to log in and see your portfolio. You are also able to create more portfolios, edit each one, and delete as your needs change. In order to access your personal portfolio you must sign in with your google account for security and privacy compliance. Index page contains integrated api chart for mock feature. 
