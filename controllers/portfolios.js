@@ -43,11 +43,14 @@ function deletePortfolio(req, res) {
   };
 function detailPortfolio(req, res) {
   Portfolio.findById(req.params.id, function (err, detailsPortfolio) {
-    if (err) return res.redirect('/portfolios/index');
+    // console.log(detailsPortfolio.date.toISOString().split(".")[0], 'edit')
+    // if (err) return res.redirect('/portfolios/index');
+    // console.log(err)
     res.render('portfolios/edit', {detailsPortfolio, title: "Edit Portfolio" })
   })}
 function editPortfolio(req, res) {
   Portfolio.findByIdAndUpdate(req.params.id, req.body, {new:true}, function (err, overridePortfolio) {
+    console.log(err)
     if (err) return res.redirect('/portfolios/index');
       res.redirect(`/portfolios/${req.params.id}`)
   })}
